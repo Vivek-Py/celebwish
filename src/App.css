@@ -1,14 +1,37 @@
-.App{
-      padding: 2rem;
-      display: grid;
-      justify-content: center;
-      grid-template-columns: repeat(3,auto);      
-      gap: 2rem;
+.App {
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem;
 }
-@media (max-width:1188px){
+@media (max-width: 1188px) {
+  .App {
+    grid-template-columns: none;
+    grid-template-rows: 1fr;
+  }
+}
 
-      .App{
-            grid-template-columns:none;
-            grid-template-rows:1fr;
-      }
+video {
+  margin: 0 auto 10px auto;
+}
+
+.profile-container > button {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  height: 4vh;
+
+  border-radius: 10px;
+  background-color: white;
+  font-weight: 600;
+  font-size: 19px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
