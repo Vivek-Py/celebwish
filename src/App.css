@@ -5,3 +5,10 @@
       grid-template-columns: repeat(3,auto);      
       gap: 2rem;
 }
+@media (max-width:1188px){
+
+      .App{
+            grid-template-columns:none;
+            grid-template-rows:repeat(2,1fr);
+      }
+}
