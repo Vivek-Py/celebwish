@@ -13,6 +13,7 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    margin:"0 10%",
   },
 });
 export default function Homepage() {
@@ -38,26 +39,28 @@ export default function Homepage() {
     },
   ];
   return (
-    <Card className={classes.root}>
-      {actorsData.map((e) => (
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            alt="Actors"
-            height="140"
-            image={e.image}
-            title={e.name}
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              {e.name}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {e.about}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+    <>
+      {actorsData.map((e, index) => (
+        <Card className={classes.root} key={index}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              alt="Actors"
+              height="140"
+              image={e.image}
+              title={e.name}
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                {e.name}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {e.about}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
       ))}
-    </Card>
+    </>
   );
 }
